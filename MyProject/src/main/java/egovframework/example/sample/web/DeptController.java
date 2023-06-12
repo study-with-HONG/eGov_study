@@ -17,4 +17,5 @@ public class DeptController {
 	public String deptWrite() {
 		return "dept/deptWrite";
 	}
+	//commit and push error
 }
