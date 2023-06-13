@@ -17,7 +17,7 @@ public class DeptController {
 	/* 부서 입력창으로 이동 */
 	@RequestMapping(value="/deptWrite.do") // 'value=' 생략 가능
 	public String deptWrite() {
-		return "dept/deptWrite";
+		return "MYdept/deptWrite";
 	}
 	
 	/* 부서 정보 입력 */
@@ -37,7 +37,7 @@ public class DeptController {
 			System.out.println("@@@ 저장실패 @@@");
 		}
 		
-		return "dept/deptSave";
+		return "MYdept/deptSave";
 	}
 	
 	/* 부서 목록 출력 */
@@ -50,7 +50,7 @@ public class DeptController {
 		model.addAttribute("list", list);
 		
 		// 여기로 전달
-		return "dept/deptList";
+		return "MYdept/deptList";
 	}
 	
 	/* 부서 상세 내용 */
@@ -64,7 +64,7 @@ public class DeptController {
 		model.addAttribute("vo", vo);
 		
 		// 여기로 전달
-		return "dept/deptDetail";
+		return "MYdept/deptDetail";
 	}
 	
 	/* 수정 전 부서 정보 불러오기 */
@@ -75,7 +75,7 @@ public class DeptController {
 		model.addAttribute("vo", vo);
 		
 		// 여기로 전달
-		return "dept/deptUpdate";
+		return "MYdept/deptUpdate";
 	}
 	
 	/* 부서 정보 수정 */
