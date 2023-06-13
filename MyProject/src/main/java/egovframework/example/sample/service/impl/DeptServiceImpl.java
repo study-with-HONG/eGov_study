@@ -21,4 +21,9 @@ public class DeptServiceImpl implements DeptService{
 	public List<?> selectDeptList(DeptVO vo) throws Exception {
 		return dao.selectDeptList(vo);
 	}
+
+	@Override	/* 부서 상세 내용*/
+	public DeptVO selectDeptDetail(int dnum) throws Exception {
+		return dao.selectDeptDetail(dnum);
+	}
 }

@@ -52,4 +52,18 @@ public class DeptController {
 		// 여기로 전달
 		return "dept/deptList";
 	}
+	
+	/* 부서 상세 내용*/
+	@RequestMapping("deptDetail.do")
+	public String selectDeptDetail(int dnum, ModelMap model) throws Exception{
+		DeptVO vo = service.selectDeptDetail(dnum);
+		
+		System.out.println("@@@ 선택한 부서 번호 : " + dnum);
+		System.out.println("@@@ 보여줄 부서 번호 : " + vo.getDnum());
+		
+		model.addAttribute("vo", vo);
+		
+		// 여기로 전달
+		return "dept/deptDetail";
+	}
 }

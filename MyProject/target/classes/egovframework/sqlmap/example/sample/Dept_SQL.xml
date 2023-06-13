@@ -14,4 +14,10 @@
 	<select id="deptDAO.selectDeptList" resultClass="egovMap">
 		SELECT dnum, dname, dloc FROM dept
 	</select>
+	
+	<!-- 부서 상세 내용 -->
+	<select id="deptDAO.selectDeptDetail" resultClass="deptVO">
+		SELECT dnum, dname, dloc FROM dept
+		WHERE dnum = #dnum#
+	</select>
 </sqlMap>

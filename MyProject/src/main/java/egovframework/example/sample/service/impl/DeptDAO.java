@@ -19,4 +19,9 @@ public class DeptDAO extends EgovAbstractDAO{
 	public List<?> selectDeptList(DeptVO vo) throws Exception{
 		return list("deptDAO.selectDeptList", vo);
 	}
+
+	/* 부서 상세 내용*/
+	public DeptVO selectDeptDetail(int dnum) {
+		return (DeptVO) select("deptDAO.selectDeptDetail", dnum);
+	}
 }

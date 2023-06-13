@@ -9,24 +9,38 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+
+<style>
+	table{
+		width: 400px;
+		border-collapse: collapse; /* 셀 사이 간격 없애기 */
+	}
+	th, td{
+		border: 1px solid #cccccc;
+		padding: 5px;
+	}
+</style>
+
 <body>
 	<table>
-		<caption>부서목록</caption>
 		<tr>
 			<th>부서번호</th>
-			<th>부서이름</th>
-			<th>부서위치</th>
+			<td>${vo.dnum }</td>
 		</tr>
-		
-		<!-- 반복문 -->
-		<c:forEach var="list" items="${list}" varStatus="status">
-			<tr>
-				<td>${list.dnum}</td>
-				<td><a href="deptDetail.do?deptNO=${list.dnum }">${list.dname}</a></td>
-				<td>${list.dloc}</td>
-			</tr>
-		</c:forEach>
-		<!-- 반복문 -->
+		<tr>
+			<th>부서이름</th>
+			<td>${vo.dname }</td>
+		</tr>
+		<tr>
+			<th>부서위치</th>
+			<td>${vo.dloc }</td>
+		</tr>
+		<tr>
+			<th colspan="2">
+				<button type="button">수정</button>
+				<button type="button">삭제</button>
+			</th>
+		</tr>
 	</table>
 </body>
 </html>
