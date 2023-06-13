@@ -20,4 +20,16 @@
 		SELECT dnum, dname, dloc FROM dept
 		WHERE dnum = #dnum#
 	</select>
+	
+	<!-- 부서 정보 수정 -->
+	<update id="deptDAO.updateDept">
+		UPDATE dept
+		SET dname = #dname#, dloc = #dloc#
+		WHERE dnum = #dnum#
+	</update>	
+	<!-- 부서 정보 삭제 -->
+	<delete id="deptDAO.deleteDept">
+		DELETE FROM dept
+		WHERE dnum = #dnum#
+	</delete>
 </sqlMap>

@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>부서 상세 정보</title>
+<title>부서 정보 수정</title>
 </head>
 
 <style>
@@ -22,25 +22,27 @@
 </style>
 
 <body>
+<form name="frm" method="post" action="deptUpdateSave.do">
 	<table>
 		<tr>
 			<th>부서번호</th>
-			<td>${vo.dnum }</td>
+			<td><input type="text" name="dnum" value="${vo.dnum }" readonly="readonly"></td>
 		</tr>
 		<tr>
 			<th>부서이름</th>
-			<td>${vo.dname }</td>
+			<td><input type="text" name="dname" value="${vo.dname }"></td>
 		</tr>
 		<tr>
 			<th>부서위치</th>
-			<td>${vo.dloc }</td>
+			<td><input type="text" name="dloc" value="${vo.dloc }"></td>
 		</tr>
 		<tr>
 			<th colspan="2">
-				<button type="button" onclick="location='deptUpdate.do?dnum=${vo.dnum}'">수정</button>
-				<button type="button" onclick="location='deptDelete.do?dnum=${vo.dnum}'">삭제</button>
+				<button type="submit">저장</button>
+				<button type="reset">취소</button>
 			</th>
 		</tr>
 	</table>
+</form>
 </body>
 </html>

@@ -22,8 +22,18 @@ public class DeptServiceImpl implements DeptService{
 		return dao.selectDeptList(vo);
 	}
 
-	@Override	/* 부서 상세 내용*/
+	@Override	/* 부서 상세 내용 */
 	public DeptVO selectDeptDetail(int dnum) throws Exception {
 		return dao.selectDeptDetail(dnum);
+	}
+
+	@Override	/* 부서 정보 수정 */
+	public int updateDept(DeptVO vo) throws Exception {
+		return dao.updateDept(vo);
+	}
+
+	@Override	/* 부서 정보 삭제 */
+	public int deleteDept(int dnum) throws Exception {
+		return dao.deleteDept(dnum);
 	}
 }
