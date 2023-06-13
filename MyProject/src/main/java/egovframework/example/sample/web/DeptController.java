@@ -1,7 +1,6 @@
 package egovframework.example.sample.web;
 
 import java.util.List;
-
 import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,7 +20,7 @@ public class DeptController {
 	}
 	
 	/* 부서 정보 입력 */
-	@RequestMapping("deptSave.do")
+	@RequestMapping("/deptSave.do")
 	public String insertDept(DeptVO vo) throws Exception{
 		// 데이터 확인
 		System.out.println("@@@ 부서번호 : " + vo.getDnum());
@@ -41,7 +40,7 @@ public class DeptController {
 	}
 	
 	/* 부서 목록 출력 */
-	@RequestMapping("deptList.do")
+	@RequestMapping("/deptList.do")
 	public String selectDeptList(DeptVO vo, ModelMap model) throws Exception{
 		List<?> list = service.selectDeptList(vo);
 		
@@ -54,7 +53,7 @@ public class DeptController {
 	}
 	
 	/* 부서 상세 내용 */
-	@RequestMapping("deptDetail.do")
+	@RequestMapping("/deptDetail.do")
 	public String selectDeptDetail(int dnum, ModelMap model) throws Exception{
 		DeptVO vo = service.selectDeptDetail(dnum);
 		
@@ -68,7 +67,7 @@ public class DeptController {
 	}
 	
 	/* 수정 전 부서 정보 불러오기 */
-	@RequestMapping("deptUpdate.do")
+	@RequestMapping("/deptUpdate.do")
 	public String selectDeptUpdate(int dnum, ModelMap model) throws Exception{
 		DeptVO vo = service.selectDeptDetail(dnum);
 		
@@ -79,7 +78,7 @@ public class DeptController {
 	}
 	
 	/* 부서 정보 수정 */
-	@RequestMapping("deptUpdate.do")
+	@RequestMapping("/deptUpdate.do")
 	public String updateDept(DeptVO vo) throws Exception{
 		int result = service.updateDept(vo);
 		
@@ -93,7 +92,7 @@ public class DeptController {
 	}
 	
 	/* 부서 정보 삭제 */
-	@RequestMapping("deleteDept.do")
+	@RequestMapping("/deleteDept.do")
 	public String deleteDept(int dnum) throws Exception{
 		int result = service.deleteDept(dnum);
 		
