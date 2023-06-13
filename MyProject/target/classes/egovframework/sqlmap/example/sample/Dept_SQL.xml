@@ -9,4 +9,9 @@
 		INSERT INTO dept(dnum, dname, dloc)
 		VALUES(#dnum#, #dname#, #dloc#);
 	</insert>
+	
+	<!-- 부서 목록 출력 -->
+	<select id="deptDAO.selectDeptList" resultClass="egovMap">
+		SELECT dnum, dname, dloc FROM dept
+	</select>
 </sqlMap>

@@ -1,5 +1,7 @@
 package egovframework.example.sample.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 import egovframework.example.sample.service.DeptVO;
 import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
@@ -11,5 +13,10 @@ public class DeptDAO extends EgovAbstractDAO{
 	public String insertDept(DeptVO vo) throws Exception {
 		//						sql에서 사용할 아이디
 		return (String) insert("deptDAO.insertDept", vo);
+	}
+
+	/* 부서 목록 출력 */
+	public List<?> selectDeptList(DeptVO vo) throws Exception{
+		return list("deptDAO.selectDeptList", vo);
 	}
 }
