@@ -7,8 +7,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>부서 목록</title>
 </head>
+
+<style>
+	table{
+		width: 400px;
+		border-collapse: collapse; /* 셀 사이 간격 없애기 */
+	}
+	th, td{
+		border: 1px solid #cccccc;
+		padding: 5px;
+	}
+</style>
+
 <body>
 	<table>
 		<caption>부서목록</caption>
@@ -27,6 +39,10 @@
 			</tr>
 		</c:forEach>
 		<!-- 반복문 -->
-	</table>
+	</table>	<br>
+	
+	<div style="width:400px;  text-align: center;">
+		<button type="button" onclick="location='deptWrite.do'">부서입력</button>
+	</div>
 </body>
 </html>
