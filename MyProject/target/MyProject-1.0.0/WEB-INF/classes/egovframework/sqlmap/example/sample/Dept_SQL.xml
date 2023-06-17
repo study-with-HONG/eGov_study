@@ -7,7 +7,7 @@
 	<!-- 부서 정보 입력 -->
 	<insert id="deptDAO.insertDept">
 		INSERT INTO dept(dnum, dname, dloc)
-		VALUES(#dnum#, #dname#, #dloc#)
+		VALUES(#dnum#, #dname#, #dloc#);
 	</insert>
 	
 	<!-- 부서 목록 출력 -->
@@ -20,11 +20,6 @@
 		SELECT dnum, dname, dloc FROM dept
 		WHERE dnum = #dnum#
 	</select>
-	
-	
-	
-	
-	
 	
 	<!-- 부서 정보 수정 -->
 	<update id="deptDAO.updateDept">

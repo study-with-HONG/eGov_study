@@ -16,7 +16,7 @@ public class DeptServiceImpl implements DeptService{
 	public String insertDept(DeptVO vo) throws Exception {
 		return dao.insertDept(vo);
 	}
-
+	
 	@Override	/* 부서 목록 출력 */
 	public List<?> selectDeptList(DeptVO vo) throws Exception {
 		return dao.selectDeptList(vo);
@@ -27,6 +27,10 @@ public class DeptServiceImpl implements DeptService{
 		return dao.selectDeptDetail(dnum);
 	}
 
+	
+	
+	
+	
 	@Override	/* 부서 정보 수정 */
 	public int updateDept(DeptVO vo) throws Exception {
 		return dao.updateDept(vo);

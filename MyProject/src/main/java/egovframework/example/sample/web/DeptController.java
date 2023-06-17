@@ -36,9 +36,9 @@ public class DeptController {
 			System.out.println("@@@ 저장실패 @@@");
 		}
 		
-		return "MYdept/deptSave";
+		return "redirect:deptList.do";
 	}
-	
+
 	/* 부서 목록 출력 */
 	@RequestMapping("/deptList.do")
 	public String selectDeptList(DeptVO vo, ModelMap model) throws Exception{
@@ -51,7 +51,7 @@ public class DeptController {
 		// 여기로 전달
 		return "MYdept/deptList";
 	}
-	
+
 	/* 부서 상세 내용 */
 	@RequestMapping("/deptDetail.do")
 	public String selectDeptDetail(int dnum, ModelMap model) throws Exception{
@@ -65,9 +65,9 @@ public class DeptController {
 		// 여기로 전달
 		return "MYdept/deptDetail";
 	}
-	
+	////////////////////
 	/* 수정 전 부서 정보 불러오기 */
-	@RequestMapping("/deptUpdate.do")
+	@RequestMapping("/deptUpdateBefore.do")
 	public String selectDeptUpdate(int dnum, ModelMap model) throws Exception{
 		DeptVO vo = service.selectDeptDetail(dnum);
 		
@@ -78,7 +78,7 @@ public class DeptController {
 	}
 	
 	/* 부서 정보 수정 */
-	@RequestMapping("/deptUpdate.do")
+	@RequestMapping("/deptUpdateSave.do")
 	public String updateDept(DeptVO vo) throws Exception{
 		int result = service.updateDept(vo);
 		
@@ -92,7 +92,7 @@ public class DeptController {
 	}
 	
 	/* 부서 정보 삭제 */
-	@RequestMapping("/deleteDept.do")
+	@RequestMapping("/deptDelete.do")
 	public String deleteDept(int dnum) throws Exception{
 		int result = service.deleteDept(dnum);
 		

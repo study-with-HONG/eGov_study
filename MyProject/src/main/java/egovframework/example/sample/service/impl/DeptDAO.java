@@ -19,12 +19,16 @@ public class DeptDAO extends EgovAbstractDAO{
 	public List<?> selectDeptList(DeptVO vo) {
 		return list("deptDAO.selectDeptList", vo);
 	}
-
+	
 	/* 부서 상세 내용 */
 	public DeptVO selectDeptDetail(int dnum) {
 		return (DeptVO) select("deptDAO.selectDeptDetail", dnum);
 	}
 
+
+	
+	
+	
 	/* 부서 정보 수정 */
 	public int updateDept(DeptVO vo) {
 		return update("deptDAO.updateDept", vo);
